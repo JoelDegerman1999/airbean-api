@@ -4,7 +4,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import se.air.airbean.airbean.entites.OrderHistory;
 import se.air.airbean.airbean.entites.Product;
+import se.air.airbean.airbean.entites.User;
 import se.air.airbean.airbean.repositories.ProductRepository;
 import se.air.airbean.airbean.repositories.RealOrderRepository;
 
@@ -16,11 +18,8 @@ public class AirbeanApplication {
   }
 
   @Bean
-  public CommandLineRunner runner(ProductRepository pRepo, RealOrderRepository orderRepository) {
+  public CommandLineRunner runner(ProductRepository pRepo) {
     return (args -> {
-
-
-
 
       Product p1 = new Product();
       p1.setTitle("Bryggkaffe");

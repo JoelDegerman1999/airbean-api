@@ -11,12 +11,15 @@ import java.time.LocalDate;
 @Entity
 @Data
 public class OrderHistory {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private long id;
 
-    private String orderId;
-    private int totalSum;
-    private LocalDate date;
+  private String orderNumber;
+  private int totalSum;
+  private LocalDate date;
 
+  public OrderHistory() {
+    this.date = LocalDate.now();
+  }
 }
